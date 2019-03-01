@@ -1,6 +1,6 @@
 {
   "name": "ldap-auth-proxy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "LDAP Auth Proxy. Which allow you to create an auth layer in front of your app.",
   "scripts": {
     "start": "node ./src/index.js",
@@ -23,13 +23,11 @@
   "homepage": "https://github.com/agate/ldap-auth-proxy#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "express-http-proxy": "^1.5.1",
     "express-session": "^1.15.6",
+    "http-proxy": "^1.17.0",
     "ldapjs": "^1.0.2",
-    "lodash": "^4.17.11",
     "mustache": "^3.0.1",
     "pug": "^2.0.3",
-    "request": "^2.88.0",
     "winston": "^3.2.1"
   }
 }
