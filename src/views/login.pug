@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description' content='')
+    meta(name='author' content='agate')
+    link(rel='icon' href='/ldap-auth-proxy/icon.png')
+    title Login
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+    link(href='/ldap-auth-proxy/style.css', rel='stylesheet')
+  body
+    form.form-signin(method="POST")
+      .text-center.mb-4
+        img.mb-4(src='/ldap-auth-proxy/icon.png', alt='', width='72', height='72')
+        h1.h3.mb-3.font-weight-normal Please Sign in
+        if error
+          p.text-danger
+            = error
+        else
+          p
+            | You have to sign in to continue accessing this page
+      .form-label-group
+        input#inputUsername.form-control(name='username' type='text', placeholder='Username', required='', autofocus='')
+        label(for='inputUsername') Username
+      .form-label-group
+        input#inputPassword.form-control(name='password' type='password', placeholder='Password', required='')
+        label(for='inputPassword') Password
+      .checkbox.mb-3
+        label
+          input(type='checkbox', value='remember-me')
+          |  Remember me
+      button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
+      p.mt-5.mb-3.text-muted.text-center © 2019
